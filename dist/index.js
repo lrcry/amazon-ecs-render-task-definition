@@ -340,6 +340,8 @@ async function run() {
     const newTaskDefContents = JSON.stringify(taskDefContents, null, 2);
     fs.writeFileSync(updatedTaskDefFile.name, newTaskDefContents);
     core.setOutput('task-definition', updatedTaskDefFile.name);
+	  const taskDefFile = fs.readFileSync(updatedTaskDefFile.name);
+	  console.log('----------------------------------', taskDefFile);
   }
   catch (error) {
     core.setFailed(error.message);
