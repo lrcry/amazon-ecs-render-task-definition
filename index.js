@@ -13,7 +13,8 @@ const IGNORED_TASK_DEFINITION_ATTRIBUTES = [
   'status',
   'registeredAt',
   'deregisteredAt',
-  'registeredBy'
+  'registeredBy',
+  'enableFaultInjection',
 ];
 
 function removeIgnoredAttributes(taskDef) {
