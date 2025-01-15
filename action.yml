@@ -48,4 +48,4 @@ outputs:
     description: 'The path to the rendered task definition file'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'dist/index.js'
