@@ -71,7 +71,7 @@ function cleanNullKeys(obj) {
 
 function removeIgnoredAttributes(taskDef) {
   for (var attribute of IGNORED_TASK_DEFINITION_ATTRIBUTES) {
-    if (taskDef[attribute]) {
+    if (typeof(taskDef[attribute]) !== undefined) {
       delete taskDef[attribute];
     }
   }
